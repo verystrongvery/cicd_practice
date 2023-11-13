@@ -4,18 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a08e9a2d-e75a-4f4f-b4ff-35fdf8a0c99e" name="Changes" comment="chore: README.md 수정">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websocket_practice_backend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websocket_practice_backend/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websocket_practice_backend/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websocket_practice_backend/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websocket_practice_backend/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websocket_practice_backend/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websocket_practice_backend/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websocket_practice_backend/src/main/java/com/example/websocket_practice_backend/WebsocketPracticeBackendApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websocket_practice_backend/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websocket_practice_backend/src/test/java/com/example/websocket_practice_backend/WebsocketPracticeBackendApplicationTests.java" afterDir="false" />
+    <list default="true" id="a08e9a2d-e75a-4f4f-b4ff-35fdf8a0c99e" name="Changes" comment="feat: feat Vue 프로젝트 초기설정">
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websocket_practice_backend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websocket_practice_frontend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websocket_practice_frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/websocket_practice_frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websocket_practice_frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/websocket_practice_frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websocket_practice_frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/websocket_practice_frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websocket_practice_frontend/src/assets/profile1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/websocket_practice_frontend/src/assets/profile2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/websocket_practice_frontend/src/assets/profile3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/websocket_practice_frontend/src/assets/profile4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/websocket_practice_frontend/src/assets/profile5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/websocket_practice_frontend/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/websocket_practice_frontend/src/views/HomeView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websocket_practice_frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/websocket_practice_frontend/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,22 +64,23 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/topme/Desktop/code/websocket_practice",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\topme\\Desktop\\code\\spring_security_practice\\spring_security_practice_frontend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/topme/Desktop/code/websocket_practice/websocket_practice_backend/.gradle&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.2.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/example/spring_security_practice/domain/refreshtoken" />
@@ -86,7 +91,7 @@
       <recent name="com.example.spring_security_practice.common.utils" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Docker.websocket_practice_frontend/Dockerfile build-stage">
     <configuration name="SpringSecurityPracticeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="spring_security_practice.main" />
@@ -95,6 +100,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="websocket_practice_frontend/Dockerfile build-stage" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="node_build-stage" />
+          <option name="buildCliOptions" value="--target build-stage" />
+          <option name="buildKitEnabled" value="true" />
+          <option name="buildOnly" value="true" />
+          <option name="sourceFilePath" value="websocket_practice_frontend/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.websocket_practice_frontend/Dockerfile build-stage" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -112,7 +140,14 @@
       <workItem from="1698576119678" duration="2985000" />
       <workItem from="1698581517043" duration="24274000" />
       <workItem from="1698894653373" duration="457000" />
-      <workItem from="1698895138960" duration="298000" />
+      <workItem from="1698895138960" duration="5607000" />
+      <workItem from="1699515911020" duration="42000" />
+      <workItem from="1699516047222" duration="8287000" />
+      <workItem from="1699526551332" duration="24994000" />
+      <workItem from="1699602028477" duration="923000" />
+      <workItem from="1699603272317" duration="1630000" />
+      <workItem from="1699605352392" duration="3563000" />
+      <workItem from="1699852665106" duration="5707000" />
     </task>
     <task id="LOCAL-00001" summary="chore: 스프링부트 프로젝트 초기화">
       <option name="closed" value="true" />
@@ -130,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698886677477</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: feat Vue 프로젝트 초기설정">
+      <option name="closed" value="true" />
+      <created>1699096074800</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699096074800</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +182,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore: 스프링부트 프로젝트 초기화" />
     <MESSAGE value="chore: README.md 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: README.md 수정" />
+    <MESSAGE value="feat: feat Vue 프로젝트 초기설정" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: feat Vue 프로젝트 초기설정" />
   </component>
 </project>

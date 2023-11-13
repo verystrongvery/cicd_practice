@@ -7,7 +7,7 @@
             <v-col v-for="(image, index) in profileImages" :key="index">
               <v-item v-slot="{ selectedClass }" :key="index">
                 <v-card :class="selectedClass" @click="selectedProfileImageIndex = index">
-                  <v-img :key="index" :src="`/src/assets/${image}`"> </v-img>
+                  <v-img :key="index" :src="`/assets/${image}`"> </v-img>
                 </v-card>
               </v-item>
             </v-col>
@@ -34,7 +34,7 @@ const selectedProfileImageIndex = ref(0);
 const nickname = ref('');
 const user = useUsersStore();
 const onEnterChatRoom = () => {
-  user.login(nickname.value, '/src/assets/' + profileImages[selectedProfileImageIndex.value]);
+  user.login(nickname.value, '/assets/' + profileImages[selectedProfileImageIndex.value]);
   router.push('/chat');
 };
 </script>

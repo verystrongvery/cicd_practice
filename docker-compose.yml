@@ -1,0 +1,16 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./websocket_practice_frontend
+      dockerfile: ./Dockerfile
+    ports:
+      - "8081:80"
+    restart: always
+  backend:
+    build:
+      context: ./websocket_practice_backend
+      dockerfile: ./Dockerfile
+    ports:
+      - "8080:8080"
+    restart: always

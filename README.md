@@ -1,40 +1,73 @@
 # 프로젝트 요약
-1. STOMP, Websocket을 활용하여 실시간 채팅 구현
-2. Vue와 Vue 라이브러리(vuetify, pinia 등)를 활용하여 화면단 구현
+1. AWS EC2를 활용하여 서버 구축
+2. Docker, Docker-Compose를 활용하여 배포환경 구축
+3. Jenkins를 활용하여 CI/CD 환경 구축
 
 # 기술스택
-- Spring Boot 2
-- STOMP
-- Vue 3
+1. AWS EC2
+2. Docker, Docker-Compose
+3. Nginx
+4. Jenkins
 
-# 프로젝트 구현내용
-### 1. 웹소켓 관련 설정 클래스 생성
-- 메시지 브로커 활성화
-- 웹소켓 통신에 적용되는 엔드포인트 등록
-- 구독, 구독 취소 등을 위한 메시지 브로커 prefix 등록
-- 메시지를 보내기 위한 어플리케이션 prefix 등록
-### 2. 웹소켓을 통해 메시지를 주고받기 위한 컨트롤러 생성
-- 채팅방 입장시, 구독자들에게 입장 메시지를 보냄
-- 채팅방 퇴장시, 구독자들에게 퇴장 메시지를 보냄
-- 메시지 전송시, 구독자들에게 입력한 메시지를 보냄
+# 로컬 환경에서 배포 환경 구축
+### 1. 프로젝트 빌드
+1. Spring Boot 프로젝트를 빌드하여 jar 파일 생성
+2. Vue 프로젝트를 빌드하여 dist 폴더 생성
+### 2. nginx 설정파일 작성
+- Vue 프로젝트에서 생성한 웹 페이지를 전달받기 위한 포트번호 지정
+- Spring Boot 프로젝트에서 생성한 웹소켓 API를 호출하기 위한 프록시 설정
+### 3. Dockerfile 작성
+1. Spring Boot 프로젝트를 실행할 Dockerfile 작성
+   - JRE 도커 이미지 Pull
+   - 빌드 결과물인 jar 파일을 JRE 도커 이미지에 복사
+   - jar 파일 실행
+2. Vue 프로젝트를 실행할 Dockerfile 작성
+   - Nginx 도커 이미지 Pull
+   - 빌드 결과물인 dist 폴더를 Nginx 도커 이미지에 복사
+   - Nginx 실행
+### 4. docker-compose.yml 작성
 
-# 실시간 채팅 과정
-### 1. 채팅방 입장하기 버튼 클릭
-![](https://velog.velcdn.com/images/topmedia/post/da6f4d32-8fde-4199-abe3-372b7c2f84bc/image.png)
-1. Vue Pinia를 활용하여 유저 정보 상태 관리
-2. 채팅방 주소로 이동
-### 2. 채팅방 입장
-![](https://velog.velcdn.com/images/topmedia/post/fc240285-1d7d-4005-ba3a-49219a2ae8dd/image.png)
-1. 웹소켓 통신 연결
-2. 채팅방(토픽) 구독 
-3. 사람들(구독자들)에게 입장 메시지를 보냄
-### 3. 메시지 전송
-![](https://velog.velcdn.com/images/topmedia/post/cc5b6aea-a9e5-4ece-ab12-0d5df5d01cf4/image.png)
-1. 채팅방에 입장 메시지를 보냄
-2. 같은 채팅방 사람들은 메시지를 받아 화면에 출력
-### 4. 채팅방 퇴장
-![](https://velog.velcdn.com/images/topmedia/post/d16be41f-a22e-4c2d-9485-625ec745a292/image.png)
-1. 사람들에게 퇴장 메시지를 보냄
-2. 채팅방(토픽) 구독 취소
-3. 웹소켓 통신 연결 종료
-4. Vue Pinia에서 상태 관리 하던 유저 정보 삭제
+
+
+
+
+### 1. Docker를 활용하여 Nginx 설치
+1. 도커 nginx 이미지 pull
+    - sudo docker pull nginx
+2. pull 받은 도커 nginx 이미지를 컨테이너로 실행
+    - docker run -d --name nginx -d -p 8082:80 nginx
+3. 
+
+### 1. 프로젝트 빌드 및 배포를 위한 Dockerfile 작성
+1. 
+
+
+### 1. AWS EC2 인스턴스 생성
+1. OS Image: Amazon Machine Image 선택
+2. 인스턴스 유형: t2.micro 선택
+3. 안전한 AWS 접속을 위한 키페어 생성(생성한 키페어는 다운로드하여 안전하게 보관
+4. 인바운드 보안규칙 설정
+   - SSH 접속을 위한 22번 포트 추가
+   - Nginx 서버 접속을 위한 8081번 포트 추가
+   - Jenkins 서버 접속을 위한 8082번 포트 추가
+5. 생성한 키페어 권한을 400으로 변경
+6. ssh 명령어를 통해 EC2 인스턴스에 접속
+### 2. AWS EC2 인스턴스에 Docker 설치
+1. Docker 설치
+2. Docker 실행
+3. Docker 그룹에 사용자 추가
+4. /var/run/docker.sock 권한을 666으로 변경
+### 3. AWS EC2 인스턴스에 Nginx 설치
+1. 도커 nginx 이미지 pull
+
+
+
+### 3. AWS EC2 인스턴스에 Jenkins 설치
+1. 도커 젠킨스 이미지 pull
+2. pull 받은 젠킨스 이미지를 컨테이너로 실행
+    - sudo docker run --name jenkins -d -p 8082:8080 -v /var/run/docker.sock:/var/run/docker.sock -v /home/ec2-user/jenkins:/var/jenkins_home jenkins/jenkins:lts
+3. 젠킨스 도커 컨테이너에 접속하여, 젠킨스 초기 비밀번호 확인
+4. 젠킨스 서버([AWS EC2 퍼블릭 IPv4 주소]:8082) 접속
+
+
+# 무중단 배포 과정
